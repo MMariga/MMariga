@@ -1,0 +1,25 @@
+def bmi_calculator(name, weight, height):
+    bmi = round(weight/height**2, 2)
+    if weight > 0 and height > 0:
+        if bmi <= 18.5:
+            print(f"Hi {name}, your BMI is {bmi}")
+            print("You are in the underweight range.")
+        elif bmi <= 24.9:
+            print(f"Hi {name}, your BMI is {bmi}")
+            print("You are in the healthy weight range.")
+        elif bmi <= 29.9:
+            print(f"Hi {name}, your BMI is {bmi}")
+            print("You are in the overweight range.")
+        else:
+            print(f"Hi {name}, your BMI is {bmi}")
+            print("You are in the overweight range.")
+    elif weight == 0 and height == 0:
+        print("Weight and height cannot be '0'")
+    else:
+        print("Height and weight must be a positive number")
+
+
+name_input = input("Please enter your name>>>")
+weight_input = float(input("Please enter your weight in kgs>>>"))
+height_input = float(input("Please enter your height in metres>>>"))
+bmi_calculator(name_input, weight_input, height_input)
